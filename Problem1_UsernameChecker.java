@@ -30,11 +30,13 @@ public class Problem1_UsernameChecker {
         uc.registerUser("john_doe", 1);
         uc.registerUser("admin", 2);
 
-        System.out.println(uc.checkAvailability("john_doe"));  
-        System.out.println(uc.checkAvailability("jane_smith")); 
-        System.out.println(uc.suggestAlternatives("john_doe")); 
+        System.out.println(uc.checkAvailability("john_doe"));   // false
+        System.out.println(uc.checkAvailability("jane_smith")); // true
+        System.out.println(uc.suggestAlternatives("john_doe")); // [john_doe1, john_doe2, john_doe3, john.doe]
+
         uc.checkAvailability("admin");
         uc.checkAvailability("admin");
         uc.checkAvailability("admin");
-        System.out.println(uc.getMostAttempted());
-}}
+        System.out.println(uc.getMostAttempted()); // admin
+    }
+}
